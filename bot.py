@@ -69,6 +69,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_text = update.message.text
 
+        if user_text == "🤖 Спросить ИИ":
+        await update.message.reply_text(
+            "Напишите свой вопрос по работе заместителя директора школы — я постараюсь помочь."
+        )
+        return
+
+    
+
     prompts = {
         "📄 Приказ":
             "Помоги составить приказ по школе. "
